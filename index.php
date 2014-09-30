@@ -1,4 +1,4 @@
-<?php header("Content-Type:text/html; charset=ISO-8859-1",true) ?>
+<?php //header("Content-Type:text/html; charset=ISO-8859-1",true) ?>
 
 <?php 
 /*
@@ -60,7 +60,7 @@ class TApplication
          */
         else
         {
-            $pagina 	= new curriculum();
+            $pagina 	= new home();
             ob_start();
             $pagina->show();
             $content 	= ob_get_contents();
