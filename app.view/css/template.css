@@ -24,6 +24,10 @@ body
 	color:				#ffffff;
 }
 
+a
+{
+	cursor:url('../img/template/dog-paw.png'), auto !important;
+}
 
 
 /*
@@ -58,20 +62,30 @@ nav.menuPrincipal
 	width:				100%;
 	height:				40px;
 	background-color:	#ffffff;
+	z-index:			1000;
+	
 }
 
 nav.menuPrincipal ul
 {
-	display:	inline-block;
+	list-style:	none; 
 	padding:	0;
 	margin:		0;
+	z-index:	1000;
 }
 
 nav.menuPrincipal ul li
 {
-	list-style:	none;
-	display:	inline-block;
-	font-size:	30px;
+	list-style:			none;
+	display:			inline-block;
+	font-size:			30px;
+	vertical-align:		top;
+	text-align:			left;
+	
+	position:			relative;
+	left:				0px;
+	
+	z-index:			1000;
 }
 
 nav.menuPrincipal ul li a
@@ -83,21 +97,76 @@ nav.menuPrincipal ul li a
 	
 	font-family:		'Open Sans', sans-serif;
 	font-weight:		bolder;
+	
+	-webkit-transition: background 0.5s ease-out;
+    -moz-transition:    background 0.5s ease-out;
+    -o-transition:      background 0.5s ease-out;
+    -ms-transition:     background 0.5s ease-out;
+    /*Cor do texto*/
+    -webkit-transition: color 0.5s ease-out;
+    -moz-transition:    color 0.5s ease-out;
+    -o-transition:      color 0.5s ease-out;
+    -ms-transition:     color 0.5s ease-out;
+	
+	z-index:			1000;
 }
 
 nav.menuPrincipal ul li a:hover
 {
-	background-color:	#3c547a;
+	background-image:	url('../img/template/background.png');
 	color:				#ffffff;
 	text-decoration:	underline;
+	
+	z-index:			1000;
+}
+
+nav.menuPrincipal ul li ul
+{
+	display:	none;
+	
+	z-index:	1000;
+}
+
+nav.menuPrincipal ul li:hover ul
+{
+	position:	absolute;
+	display:	block;
+	
+	z-index:	1000;
+}
+
+nav.menuPrincipal ul li:hover ul li
+{
+	position:			relative;
+	background-color:	#ffffff;
+	width:				100%;
+	display:			inline-block;
+	white-space:		nowrap;
+	z-index:			1000;
+}
+
+nav.menuPrincipal ul li:hover ul li:hover
+{
+	background:	transparent;
+	z-index:	1000;
+}
+
+nav.menuPrincipal ul li:hover ul li:hover a:hover
+{
+	color:		#3c547a;
+	background: transparent;
+	
+	z-index:	1000;
 }
 
 div.sliderGrande
 {
-	margin-top:		20px;
-	height:			300px;
-	width:			100%;
-	background-color: red;
+	margin-top:			20px;
+	height:				300px;
+	width:				100%;
+	/*background-color:	red;*/
+	
+	z-index:			0;
 }
 
 div.sliderMenor
@@ -108,7 +177,7 @@ div.sliderMenor
 	
 	text-align:		center;
 	
-	background-color: red;
+	/*background-color: red;*/
 }
 
 div.sliderMenor div
@@ -122,18 +191,18 @@ div.sliderMenor div
 div#adoteCachorro
 {
 	float: left;
-	background-color: blue;
+	/*background-color: blue;*/
 }
 
 div#adoteGato
 {
-	background-color: yellow;
+	/*background-color: yellow;*/
 }
 
 div#apoio
 {
 	float: right;
-	background-color: green;
+	/*background-color: green;*/
 }
 
 
@@ -145,7 +214,7 @@ section.content
 {
 	margin-top:			20px;
 	text-align:			justify;
-	background-color: red;
+	/*background-color: red;*/
 }
 
 
@@ -169,9 +238,29 @@ div#animais
 div#rodapeGrande
 {
 	position:			relative;
-	top:				-63px;
-	margin-top:			20px;
+	margin-top:			-40px;
 	vertical-align:		top;
+}
+
+div#rodapeGrande a, a:hover
+{
+	font-family:		'Open Sans Condensed', sans-serif;
+	color:				#ffffff;
+	text-decoration:	none;
+	white-space:		nowrap;
+}
+div#rodapeGrande a:hover
+{
+	text-decoration:	underline;
+}
+
+div#rodapeGrande h1
+{
+	font-size:			20pt;
+	text-align:			right;
+	text-decoration:	underline;
+	margin-bottom:		0px;
+	padding-bottom:		0px;
 }
 
 div#rodapeGrande div
@@ -190,35 +279,29 @@ div#rodapeGrande div#menuInferior
 
 }
 
+nav.menuInferior
+{
+	color: #ffffff;
+}
+nav.menuInferior ul li
+{
+	list-style: none;
+}
+
+div#rodapeGrande div#navegadores a, a:hover
+{
+	text-decoration: none;
+}
+
 div#rodapeGrande div#navegadores img
 {
-	width:	37px;
-	height: 37px;
-}
-
-div#rodapeGrande div#desenvolvedor a, a:hover
-{
-	font-family:		'Open Sans Condensed', sans-serif;
-	color:				#ffffff;
-	text-decoration:	none;
-}
-div#rodapeGrande div#desenvolvedor a:hover
-{
-	text-decoration:	underline;
-}
-
-div#rodapeGrande h1
-{
-	font-size:			20pt;
-	text-align:			right;
-	text-decoration:	underline;
-	margin-bottom:		0px;
-	padding-bottom:		0px;
+	width:	36.5px;
+	height: 36.5px;
 }
 
 div.rodape
 {
-	margin-top:			20px;
+	margin-top:			0px;
 	background-color:	#ffffff;
 	text-align:			center;
 	
